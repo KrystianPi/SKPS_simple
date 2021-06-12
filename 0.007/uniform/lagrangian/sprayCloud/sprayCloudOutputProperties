@@ -1,0 +1,49 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2012                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "0.007/uniform/lagrangian/sprayCloud";
+    object      sprayCloudOutputProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+injectionModel
+{
+    model1
+    {
+        volumeTotal     0.00874187;
+        massInjected    5.99558e-06;
+        nInjections     27938;
+        parcelsAddedTotal 11078;
+        timeStep0       0.007;
+    }
+}
+
+patchInteractionModel
+{
+    escapedParcels  0;
+    escapedMass     0;
+    standardWallInteraction
+    {
+        nEscape         3 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+        massEscape      3 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+        nStick          3 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+        massStick       3 ( 1 ( 0 ) 1 ( 0 ) 1 ( 0 ) );
+    }
+}
+
+phaseChangeModel
+{
+    mass            5.99558e-06;
+}
+
+
+// ************************************************************************* //
